@@ -24,46 +24,56 @@
 
     .seat-section .seat-section-title h4 {
         text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: .75rem;
     }
 
-    @media screen and (max-width: 29.99em) {
+    @media screen and (min-width: 25em) {
         .seat-section .seat-section-title h4 {
-            margin-bottom: 0;
+            font-size: .875rem;
+        }
+    }
+    
+    @media screen and (min-width: 30em) {
+        .seat-section .seat-section-title h4 {
+            font-size: 1rem;
         }
     }
 
-    @media screen and (min-width: 30em) {
+    @media screen and (min-width: 37.5em) {
         .seat-section .seat-section-title h4 {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
     }
     
     @media screen and (min-width: 50em) {
         .seat-section .seat-section-title h4 {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
 
-    .seat-section#section-A .seat-section-chart {
+    .seat-section#section-A .seat-section-chart svg {
         border: 2px solid #000;
-        border-top: none;
+        border-top: 1px dashed #000;
+        margin-bottom: 20px;
     }
 
-    @media screen and (max-width: 29.99em) {
-        .seat-section#section-A .seat-section-chart {
-            padding-top: 10px;
-        }
-    }
-
-    .seat-section#section-B .seat-section-chart {
+    .seat-section#section-B .seat-section-chart svg {
         border: 2px solid #000;
         border-bottom: none;
+    }
+    
+    .seat-section .seat-section-chart p {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0.5em;
     }
 
     .seat-section .seat-section-chart svg {
         stroke: #000;
         stroke-width: 2px;
         fill: #fff;
+        display: block;
     }
 
     @media screen and (max-width: 49.99em) {
@@ -94,6 +104,16 @@
 
             fill: #edabba;
         }
+    }
+
+    .seat-section#stage .seat-section-chart {
+        border: 2px solid #000;
+        border-bottom: none;
+        margin-top: 2em;
+    }
+
+    .seat-section#stage .seat-section-chart p {
+        padding: 1em;
     }
 
 </style>
