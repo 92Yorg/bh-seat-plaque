@@ -116,4 +116,28 @@
         padding: 1em;
     }
 
+    label#for-section-A:hover {
+        background: #ff5447;
+    }
+
+    label#for-section-B:hover {
+        background: #8eaae2;
+    }
+
+    label#for-section-C:hover {
+        background: #edabba;
+    }
+
+    
+
+
+
+    input[name$="list"]:checked + label#for-section-A, .radio-checked,
+    input[name$="list"]:checked + label#for-section-B, .radio-checked,
+    input[name$="list"]:checked + label#for-section-C, .radio-checked {
+        background: #000;
+        color: #fff;
+    }
+
+
 </style>

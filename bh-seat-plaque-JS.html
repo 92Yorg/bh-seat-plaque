@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	$(
+		"label[for='p_lt_ctl01_plcNotExist_p_lt_ctl05_pageContentHidden_ucEditableText_widget1_ctl00_viewBiz_Donation_list_0']"
+	).prop("id", "for-section-A");
+	$(
+		"label[for='p_lt_ctl01_plcNotExist_p_lt_ctl05_pageContentHidden_ucEditableText_widget1_ctl00_viewBiz_Donation_list_1']"
+	).prop("id", "for-section-B");
+	$(
+		"label[for='p_lt_ctl01_plcNotExist_p_lt_ctl05_pageContentHidden_ucEditableText_widget1_ctl00_viewBiz_Donation_list_2']"
+	).prop("id", "for-section-C");
+    $("label#for-section-A").hover(
+	function () { 
+		$(".seat-section#section-A .seat-section-chart svg").css({ fill: '#ff5447' })
+	},
+	function () { 
+		$(".seat-section#section-A .seat-section-chart svg").css({ fill: '' })
+	}
+);
+
+$("label#for-section-B").hover(
+	function () { 
+		$(".seat-section#section-B .seat-section-chart svg").css({ fill: '#8eaae2' })
+	},
+	function () { 
+		$(".seat-section#section-B .seat-section-chart svg").css({ fill: '' })
+	}
+);
+
+$("label#for-section-C").hover(
+	function () { 
+		$(".seat-section#section-C .seat-section-chart svg").css({ fill: '#edabba' })
+	},
+	function () { 
+		$(".seat-section#section-C .seat-section-chart svg").css({ fill: '' })
+	}
+);
+</script>
