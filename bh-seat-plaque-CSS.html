@@ -1,4 +1,12 @@
 <style type="text/css">
+    	:root {
+		--92nyblue: #8eaae2;
+		--92nygreen: #21805e;
+		--92nypink: #edabba;
+		--92nymagenta: #990d61;
+		--92nyred: #ff5447;
+	}
+
     .seat-section {
         display: flex;
         align-items: center;
@@ -78,31 +86,31 @@
 
     @media screen and (max-width: 49.99em) {
         .seat-section#section-A .seat-section-chart svg {
-            fill: #ff5447;
+            fill: var(--92nygreen);
         }
 
         .seat-section#section-B .seat-section-chart svg {
-            fill: #8eaae2;
+            fill: var(--92nyred);
         }
 
         .seat-section#section-C .seat-section-chart svg {
 
-            fill: #edabba;
+            fill: var(--92nyblue);
         }
     }
 
     @media screen and (min-width: 50em) {
         .seat-section#section-A:hover .seat-section-chart svg {
-            fill: #ff5447;
+            fill: var(--92nygreen);
         }
 
         .seat-section#section-B:hover .seat-section-chart svg {
-            fill: #8eaae2;
+            fill: var(--92nyred);
         }
 
         .seat-section#section-C:hover .seat-section-chart svg {
 
-            fill: #edabba;
+            fill: var(--92nyblue);
         }
     }
 
@@ -117,15 +125,15 @@
     }
 
     label#for-section-A:hover {
-        background: #ff5447;
+        background: var(--92nygreen);
     }
 
     label#for-section-B:hover {
-        background: #8eaae2;
+        background: var(--92nyred);
     }
 
     label#for-section-C:hover {
-        background: #edabba;
+        background: var(--92nyblue);
     }
 
     
