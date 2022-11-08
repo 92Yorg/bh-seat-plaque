@@ -78,10 +78,19 @@
     }
 
     .seat-section .seat-section-chart svg {
-        stroke: #000;
-        stroke-width: 2px;
-        fill: #fff;
         display: block;
+    }
+
+    .seat-section .seat-section-chart svg#Layer_1B  {
+        fill: var(--92nyred)
+    }
+
+     .seat-section .seat-section-chart svg#Layer_1A {
+         fill: var(--92nygreen)
+    }
+
+     .seat-section .seat-section-chart svg#Layer_1C {
+         fill: var(--92nyblue)
     }
 
     @media screen and (max-width: 49.99em) {
@@ -100,19 +109,14 @@
     }
 
     @media screen and (min-width: 50em) {
-        .seat-section#section-A:hover .seat-section-chart svg {
-            fill: var(--92nygreen);
-        }
-
-        .seat-section#section-B:hover .seat-section-chart svg {
-            fill: var(--92nyred);
-        }
-
+        .seat-section#section-A:hover .seat-section-chart svg,
+        .seat-section#section-B:hover .seat-section-chart svg,
         .seat-section#section-C:hover .seat-section-chart svg {
-
-            fill: var(--92nyblue);
+            stroke: #000;
+            stroke-width: 2px;
         }
-    }
+
+     
 
     .seat-section#stage .seat-section-chart {
         border: 2px solid #000;
