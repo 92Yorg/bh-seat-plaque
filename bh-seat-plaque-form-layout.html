@@ -65,9 +65,17 @@ input[name$="list"]:checked + label,
     color: #fff;
 }
 </style>
-<div id="som-simple-donation">
+<div class="u-hidden" id="som-simple-donation">
 <div class="form-field"><label><span class="label">$$label:Donation$$</span>$$input:Donation$$</label>$$validation:Donation$$</div>
 </div>
+
+<div class="form-field"><label><span class="label">$$label:sectionA$$</span>$$input:sectionA$$</label>$$validation:sectionA$$</div>
+<div class="form-field"><label><span class="label">$$label:sectionB$$</span>$$input:sectionB$$</label>$$validation:sectionB$$</div>
+<div class="form-field"><label><span class="label">$$label:sectionC$$</span>$$input:sectionC$$</label>$$validation:sectionC$$</div>
+<div class="form-field"><label><span class="label">$$label:inscription$$</span><br>
+    <p>Please use the following spaces to print a name or dedication.  Each plaque can accommodate two lines of text with a total of 85 characters, including spaces.</p>
+    $$input:inscription$$</label>$$validation:inscription$$</div>
+<p><strong>$$submitbutton$$</strong></p>
 <script type="text/javascript">
     ;(function ($) {
         //TODO: Make this a simpler function, where ids are added a arguments/parameters to the initCSIWidget function i.e. initCSIWidget(widgetID, radiosName, otheAmtID) 
