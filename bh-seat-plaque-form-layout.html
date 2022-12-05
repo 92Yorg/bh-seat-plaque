@@ -1,123 +1,20 @@
-<style type="text/css">/*
-This CSS is in form layout
-Simple donate look created by adding the following to Control CSS class in fields tab:
-"simple-donate-radio"
-*/
+<h2>Sections A and B &mdash; Telescopic (Retractable) Seating</h2>
 
-.simple-donate-radio {
-    overflow: hidden;
-    display: block;
-}
+<p>Seats in our retractable seating area will be utilized and viewable for all Buttenwieser Hall events that require seating.</p>
 
-.simple-donate-radio br {
-    display: none;
-}
+<div class="form-field" style="padding-left: 1.5em;"><label><span class="label">$$label:sectionA$$</span>$$input:sectionA$$</label>$$validation:sectionA$$</div>
 
-.simple-donate-radio label {
-    display: inline-block;
-    float: left;
-    border-radius: 3px;
-    padding: 4px 16px 4px;
-    border: 1px solid #ccc;
-    margin: 0 3px 3px 0;
-}
-.simple-donate-radio input {
-    display: none!important;
-    visibility: hidden;
-}
-.label--usd {
-    position: absolute;
-    font-size: 16px;
-    display: block;
-    padding: 8px 10px 4px 12px;
-    top: 0;
-    line-height: 1.1;
-    top: 2px;
-}
+<div class="form-field" style="padding-left: 1.5em;"><label><span class="label">$$label:sectionB$$</span>$$input:sectionB$$</label>$$validation:sectionB$$</div>
 
-div[id*="other"] {
-    position: relative;
-}
+<h2>Section C &mdash; Floor Seating</h2>
 
-input[id*="other"] {
-    width: 100%;
-    padding: 4px 10px 4px 28px;
-    height: 34px;
-    text-align: left;
-    font-size: 16px;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    border: 1px solid #D0D0D0;
-    display: inline-block;
-    max-width: 200px;
-}
+<p>Floor seats will only be utilized and viewable for select types of programs (based on seating configurations).</p>
 
-/* Class .radio-checked is used by JS (no JS used this time though) to show selected radio input label,
-while  sibling selector "input[name$="list"]:checked + label" is a fallback in case there is a postback
-(i.e.: submit button clicked, but no amount selected and validation fails) */
+<div class="form-field" style="padding-left: 1.5em;"><label><span class="label">$$label:sectionC$$</span>$$input:sectionC$$</label>$$validation:sectionC$$</div>
 
-input[name$="list"]:checked + label,
-.radio-checked {
-    background: #4076bb;
-    color: #fff;
-}
-</style>
-<div class="u-hidden" id="som-simple-donation">
-<div class="form-field"><label><span class="label">$$label:Donation$$</span>$$input:Donation$$</label>$$validation:Donation$$</div>
-</div>
+<div class="form-field"><label><span class="label">$$label:inscription$$</span></label>
 
-<div class="form-field"><label><span class="label">$$label:sectionA$$</span>$$input:sectionA$$</label>$$validation:sectionA$$</div>
-<div class="form-field"><label><span class="label">$$label:sectionB$$</span>$$input:sectionB$$</label>$$validation:sectionB$$</div>
-<div class="form-field"><label><span class="label">$$label:sectionC$$</span>$$input:sectionC$$</label>$$validation:sectionC$$</div>
-<div class="form-field"><label><span class="label">$$label:inscription$$</span><br>
-    <p>Please use the following spaces to print a name or dedication.  Each plaque can accommodate three lines of text with a total of 85 characters, including spaces.</p>
-    $$input:inscription$$</label>$$validation:inscription$$</div>
+<p><label>Please use the following spaces to print a name or dedication. Each plaque can accommodate three lines of text with a total of 85 characters, including spaces.</label></p>
+<label> $$input:inscription$$</label>$$validation:inscription$$</div>
+
 <p><strong>$$submitbutton$$</strong></p>
-<script type="text/javascript">
-    ;(function ($) {
-        //TODO: Make this a simpler function, where ids are added a arguments/parameters to the initCSIWidget function i.e. initCSIWidget(widgetID, radiosName, otheAmtID) 
-
-        // First time the page is loaded, call out JS function
-        $(document).ready(function() {
-            initCSIWidget()
-        });
-
-        // For postback, re-initializes the JS in case someone fails validation/clicks submit with bad input
-        var prm = Sys.WebForms.PageRequestManager.getInstance();
-
-        prm.add_endRequest(function (s, e) {
-            initCSIWidget();
-        });
-
-        function initCSIWidget() {
-            $(document).ready(function () {
-                // Variables created to make donate options unique, allowing for multiple simple donate widgets on a page
-                var widgetID = '#som-simple-donation';
-                var radios = $(widgetID + ' input:radio[name$="list"]');
-                // FOR OTHER AMT -- un/comment when needed & Update if with other amount field name
-                var otherAmtField = $(widgetID + ' input[id*="otherAmount"]');
-                
-                //Whenever a radio button is clicked/changed ...
-                radios.change(function (event) {
-
-                    // FOR OTHER AMT -- un/comment when needed
-                    // clear 'Other amount' field when radio button with a value over 0 is clicked
-                    if ($(this).is(':checked') && this.value > 0) {
-                        otherAmtField.val("");
-                    }
-
-                });
-                // FOR OTHER AMT
-                // When the 'other amount' field is clicked, uncheck all radio buttons
-                otherAmtField.on("click", function () {
-                    for (i = 0; i < radios.length; i++) {
-                        radios[i].checked = false;
-                    }
-                });
-            });
-        }
-    })(jQuery);
-</script>
